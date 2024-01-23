@@ -42,8 +42,8 @@ func sendMessage(chickenChannel chan map[string]float32) {
 		result := <-chickenChannel
 
 		for website, price := range result {
-			if price < 0.00 {
-				fmt.Printf("\nFound free chicken! at: %s", website)
+			if price < 0.01 {
+				fmt.Printf("\n\nFound free chicken! at: %s \n", website)
 				os.Exit(0)
 			}
 
